@@ -21,11 +21,11 @@ setup(
     include_package_data=True,
     zip_safe=False,
     install_requires=[
-      'graphqlclient',
-      'gunicorn',
-      'numpy',
-      'Flask',
-      'pandas',
-      'prometheus-client',
+      'graphqlclient==0.2.4',
+      'gunicorn==19.9.0',
+      'numpy==1.16.2',
+      'Flask==1.0.2',
+      'pandas==0.24.2',
+      'prometheus-client==0.6.0',
     ],
 )

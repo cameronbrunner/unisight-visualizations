@@ -21,7 +21,7 @@ from flask import Flask, request, jsonify, json, abort
 import pandas as pd
 from pandas import Timestamp
 
-import flask_metrics
+from . import flask_metrics
 
 methods = ('GET', 'POST')
 

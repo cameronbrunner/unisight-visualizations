@@ -17,9 +17,9 @@ def create_app(graphql_host="", graphql_port=0, graphql_user="", graphql_pass=""
     from werkzeug.wsgi import DispatcherMiddleware
     from prometheus_client import make_wsgi_app
     import base64
-    from simplejson.routes import create_app
+    from .simplejson.routes import create_app
 
-    graphql_auth = 'Basic ' + base64.b64encode(graphql_user + ':' + graphql_pass.encode())
+    graphql_auth = 'Basic ' + base64.b64encode((graphql_user + ':' + graphql_pass).encode()).decode()
 
     app = create_app(graphql_host,
        graphql_port, graphql_auth)
@@ -30,7 +30,7 @@ def create_app(graphql_host="", graphql_port=0, graphql_user="", graphql_pass=""
     })
 
     # Load the node exporter app
-    import nodeexporter.metrics
+    from .nodeexporter import metrics
     import threading
     t = threading.Thread(target=nodeexporter.metrics.main, args=(graphql_host,
         graphql_port, graphql_auth ))

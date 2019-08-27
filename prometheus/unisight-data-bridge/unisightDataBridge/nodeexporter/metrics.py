@@ -21,7 +21,7 @@ import os
 import traceback
 
 # Import my metrics
-import graphql_queries
+from . import graphql_queries
 
 from graphqlclient import GraphQLClient
 from prometheus_client import  start_http_server, Gauge, Summary,Counter, Histogram 

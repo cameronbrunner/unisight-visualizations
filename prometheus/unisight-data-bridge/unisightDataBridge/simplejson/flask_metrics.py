@@ -29,7 +29,7 @@ from datetime import date
 from graphqlclient import GraphQLClient
 
 # Import my metrics
-import graphql_queries
+from . import graphql_queries
 
 def dataframe_to_json_table(target, df):
     response = []

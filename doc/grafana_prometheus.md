@@ -120,7 +120,7 @@ Authentication data to use when connecting to the Unisight server.  The
 simplest method is HTTP Basic.  Such a token can be created with:
 
     python -c 'from __future__ import print_function; import base64; \
-       print("Basic " + base64.b64encode("graphql_user:graphql_pass".encode()))'
+       print("Basic " + base64.b64encode("graphql_user:graphql_pass".encode()).decode())'
 
 With `graphql_user` replaced with your Unisight user and `graphql_pass`
 replaced with your GraphQL password.
