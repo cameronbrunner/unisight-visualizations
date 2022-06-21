@@ -23,7 +23,7 @@ setup(
     install_requires=[
       'graphqlclient==0.2.4',
       'gunicorn==19.9.0',
-      'numpy==1.16.2',
+      'numpy==1.22.0',
       'Flask==1.0.2',
       'pandas==0.24.2',
       'prometheus-client==0.6.0',
